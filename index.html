@@ -41,66 +41,39 @@
     -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border);
     padding: calc(var(--safe-top) + 14px) 20px 14px;
   }
-  .header-inner {
-    display: flex; align-items: center; justify-content: space-between;
-    max-width: 480px; margin: 0 auto;
-  }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; max-width: 480px; margin: 0 auto; }
   .header-title { display: flex; flex-direction: column; gap: 2px; }
   .header-title h1 { font-size: 17px; font-weight: 600; letter-spacing: -0.3px; }
   .header-date { font-family: var(--mono); font-size: 11px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.5px; }
   .header-actions { display: flex; gap: 8px; align-items: center; }
   .hdr-btn {
-    background: var(--bg3); border: 1px solid var(--border2);
-    color: var(--text2); border-radius: var(--radius-xs);
-    padding: 6px 10px; font-family: var(--font); font-size: 12px; font-weight: 500;
-    cursor: pointer; transition: all 0.2s; white-space: nowrap;
+    background: var(--bg3); border: 1px solid var(--border2); color: var(--text2);
+    border-radius: var(--radius-xs); padding: 6px 10px; font-family: var(--font);
+    font-size: 12px; font-weight: 500; cursor: pointer; transition: all 0.2s; white-space: nowrap;
   }
   .hdr-btn:active { opacity: 0.7; }
   .notif-btn { display: none; }
   .notif-btn.visible { display: block; }
   .notif-btn.active { background: var(--amber-bg); border-color: rgba(251,191,36,0.3); color: var(--amber); }
   .install-btn { display: none; background: var(--accent-glow); border: 1px solid rgba(124,156,255,0.3); color: var(--accent); }
-  .progress-section {
-    max-width: 480px; margin: 0 auto;
-    padding: 24px 20px 8px; display: flex; align-items: center; gap: 24px;
-  }
+  .progress-section { max-width: 480px; margin: 0 auto; padding: 24px 20px 8px; display: flex; align-items: center; gap: 24px; }
   .ring-wrap { position: relative; width: 96px; height: 96px; flex-shrink: 0; }
   .ring-svg { transform: rotate(-90deg); }
   .ring-bg { fill: none; stroke: var(--bg4); stroke-width: 6; }
-  .ring-fill {
-    fill: none; stroke: url(#ringGrad); stroke-width: 6; stroke-linecap: round;
-    stroke-dasharray: 263; stroke-dashoffset: 263;
-    transition: stroke-dashoffset 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
-  }
-  .ring-label {
-    position: absolute; inset: 0; display: flex; flex-direction: column;
-    align-items: center; justify-content: center; gap: 1px;
-  }
+  .ring-fill { fill: none; stroke: url(#ringGrad); stroke-width: 6; stroke-linecap: round; stroke-dasharray: 263; stroke-dashoffset: 263; transition: stroke-dashoffset 0.7s cubic-bezier(0.34, 1.56, 0.64, 1); }
+  .ring-label { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; }
   .ring-pct { font-family: var(--mono); font-size: 22px; font-weight: 500; line-height: 1; }
   .ring-sub { font-size: 9px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.5px; }
   .progress-info { display: flex; flex-direction: column; gap: 8px; flex: 1; }
   .progress-msg { font-size: 15px; font-weight: 500; line-height: 1.4; }
   .progress-count { font-family: var(--mono); font-size: 12px; color: var(--text2); }
-  .stats-row {
-    max-width: 480px; margin: 0 auto 4px; padding: 0 20px;
-    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px;
-  }
-  .stat-card {
-    background: var(--bg2); border: 1px solid var(--border);
-    border-radius: var(--radius-sm); padding: 10px 12px;
-    display: flex; flex-direction: column; gap: 3px;
-  }
+  .stats-row { max-width: 480px; margin: 0 auto 4px; padding: 0 20px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+  .stat-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 10px 12px; display: flex; flex-direction: column; gap: 3px; }
   .stat-label { font-size: 10px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.5px; }
   .stat-val { font-family: var(--mono); font-size: 14px; font-weight: 500; }
-  .stat-val.amber { color: var(--amber); }
-  .stat-val.green { color: var(--green); }
-  .stat-val.accent { color: var(--accent); }
+  .stat-val.amber { color: var(--amber); } .stat-val.green { color: var(--green); } .stat-val.accent { color: var(--accent); }
   .streak-bar { max-width: 480px; margin: 0 auto 4px; padding: 0 20px; }
-  .streak-inner {
-    background: var(--bg2); border: 1px solid var(--border);
-    border-radius: var(--radius-sm); padding: 10px 14px;
-    display: flex; align-items: center; justify-content: space-between;
-  }
+  .streak-inner { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 10px 14px; display: flex; align-items: center; justify-content: space-between; }
   .streak-label { font-size: 12px; color: var(--text2); }
   .progress-bar-wrap { flex: 1; height: 4px; background: var(--bg4); border-radius: 2px; margin: 0 12px; overflow: hidden; }
   .progress-bar-fill { height: 100%; background: linear-gradient(90deg, var(--accent2), var(--accent)); border-radius: 2px; transition: width 0.5s ease; }
@@ -115,32 +88,14 @@
   .pill-morning { background: var(--amber-bg); color: var(--amber); }
   .pill-afternoon { background: rgba(96,165,250,0.12); color: #60a5fa; }
   .pill-night { background: var(--purple-bg); color: var(--purple); }
-  .task {
-    background: var(--bg2); border: 1px solid var(--border);
-    border-radius: var(--radius-sm); margin-bottom: 8px; overflow: hidden;
-    transition: border-color 0.2s, background 0.2s; position: relative;
-  }
+  .task { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 8px; overflow: hidden; transition: border-color 0.2s, background 0.2s; position: relative; }
   .task.done { background: var(--bg); border-color: rgba(74,222,128,0.2); }
-  .task.done::after {
-    content: ''; position: absolute; left: 0; top: 0; bottom: 0;
-    width: 3px; background: var(--green); border-radius: 0 2px 2px 0;
-  }
-  .task-main {
-    display: flex; align-items: flex-start; padding: 14px 14px 14px 16px;
-    gap: 12px; cursor: pointer; -webkit-tap-highlight-color: transparent; user-select: none;
-  }
+  .task.done::after { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--green); border-radius: 0 2px 2px 0; }
+  .task-main { display: flex; align-items: flex-start; padding: 14px 14px 14px 16px; gap: 12px; cursor: pointer; -webkit-tap-highlight-color: transparent; user-select: none; }
   .task-main:active { opacity: 0.75; }
-  .check-wrap {
-    width: 22px; height: 22px; border-radius: 7px; border: 1.5px solid var(--border2);
-    flex-shrink: 0; margin-top: 1px; display: flex; align-items: center; justify-content: center;
-    transition: all 0.2s; background: var(--bg3);
-  }
+  .check-wrap { width: 22px; height: 22px; border-radius: 7px; border: 1.5px solid var(--border2); flex-shrink: 0; margin-top: 1px; display: flex; align-items: center; justify-content: center; transition: all 0.2s; background: var(--bg3); }
   .task.done .check-wrap { background: var(--green); border-color: var(--green); }
-  .check-icon {
-    opacity: 0; transform: scale(0.5);
-    transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-    color: #0d0f14; font-size: 13px; font-weight: 700; line-height: 1;
-  }
+  .check-icon { opacity: 0; transform: scale(0.5); transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1); color: #0d0f14; font-size: 13px; font-weight: 700; line-height: 1; }
   .task.done .check-icon { opacity: 1; transform: scale(1); }
   .task-body { flex: 1; }
   .task-text { font-size: 14px; font-weight: 400; line-height: 1.5; transition: color 0.2s; }
@@ -148,123 +103,47 @@
   .task-time { font-family: var(--mono); font-size: 10px; color: var(--text3); margin-top: 4px; }
   .task-note { font-size: 11px; color: var(--text3); margin-top: 4px; font-style: italic; }
   .task-actions { display: flex; border-top: 1px solid var(--border); overflow: hidden; }
-  .task-btn {
-    flex: 1; background: none; border: none; padding: 9px;
-    font-family: var(--font); font-size: 12px; color: var(--text3);
-    cursor: pointer; -webkit-tap-highlight-color: transparent; transition: all 0.15s;
-    display: flex; align-items: center; justify-content: center; gap: 5px;
-  }
+  .task-btn { flex: 1; background: none; border: none; padding: 9px; font-family: var(--font); font-size: 12px; color: var(--text3); cursor: pointer; -webkit-tap-highlight-color: transparent; transition: all 0.15s; display: flex; align-items: center; justify-content: center; gap: 5px; }
   .task-btn:first-child { border-right: 1px solid var(--border); }
   .task-btn:active { background: var(--bg3); color: var(--text2); }
-  .modal-overlay {
-    position: fixed; inset: 0; background: rgba(0,0,0,0.75);
-    backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
-    z-index: 200; display: flex; align-items: flex-end;
-    opacity: 0; pointer-events: none; transition: opacity 0.25s;
-  }
+  .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.75); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); z-index: 200; display: flex; align-items: flex-end; opacity: 0; pointer-events: none; transition: opacity 0.25s; }
   .modal-overlay.open { opacity: 1; pointer-events: all; }
-  .modal {
-    background: var(--bg2); border: 1px solid var(--border2);
-    border-radius: 24px 24px 0 0; padding: 20px 20px calc(var(--safe-bottom) + 24px);
-    width: 100%; transform: translateY(40px);
-    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    max-height: 90dvh; overflow-y: auto;
-  }
+  .modal { background: var(--bg2); border: 1px solid var(--border2); border-radius: 24px 24px 0 0; padding: 20px 20px calc(var(--safe-bottom) + 24px); width: 100%; transform: translateY(40px); transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); max-height: 90dvh; overflow-y: auto; }
   .modal-overlay.open .modal { transform: translateY(0); }
   .modal-handle { width: 36px; height: 4px; background: var(--border2); border-radius: 2px; margin: 0 auto 20px; }
   .modal-title { font-size: 15px; font-weight: 600; margin-bottom: 16px; }
-  .modal textarea {
-    width: 100%; background: var(--bg3); border: 1px solid var(--border2);
-    border-radius: var(--radius-sm); padding: 12px; color: var(--text);
-    font-family: var(--font); font-size: 14px; line-height: 1.5; resize: none; outline: none; min-height: 80px;
-  }
+  .modal textarea { width: 100%; background: var(--bg3); border: 1px solid var(--border2); border-radius: var(--radius-sm); padding: 12px; color: var(--text); font-family: var(--font); font-size: 14px; line-height: 1.5; resize: none; outline: none; min-height: 80px; }
   .modal textarea:focus { border-color: var(--accent); }
-  .modal-input {
-    width: 100%; background: var(--bg3); border: 1px solid var(--border2);
-    border-radius: var(--radius-sm); padding: 10px 12px; color: var(--text);
-    font-family: var(--mono); font-size: 13px; outline: none; margin-top: 4px;
-  }
+  .modal-input { width: 100%; background: var(--bg3); border: 1px solid var(--border2); border-radius: var(--radius-sm); padding: 10px 12px; color: var(--text); font-family: var(--mono); font-size: 13px; outline: none; margin-top: 4px; }
   .modal-input:focus { border-color: var(--accent); }
   .modal-input::placeholder { color: var(--text3); }
   .modal-label { font-size: 12px; color: var(--text2); margin-top: 12px; margin-bottom: 4px; display: block; }
-  .section-select {
-    width: 100%; background: var(--bg3); border: 1px solid var(--border2);
-    border-radius: var(--radius-sm); padding: 10px 12px; color: var(--text);
-    font-family: var(--font); font-size: 14px; outline: none; margin-top: 4px;
-    appearance: none; -webkit-appearance: none;
-  }
+  .section-select { width: 100%; background: var(--bg3); border: 1px solid var(--border2); border-radius: var(--radius-sm); padding: 10px 12px; color: var(--text); font-family: var(--font); font-size: 14px; outline: none; margin-top: 4px; appearance: none; -webkit-appearance: none; }
   .section-select option { background: var(--bg2); }
   .modal-actions { display: flex; gap: 10px; margin-top: 16px; }
-  .btn-cancel {
-    flex: 1; background: var(--bg3); border: 1px solid var(--border);
-    border-radius: var(--radius-sm); padding: 12px; color: var(--text2);
-    font-family: var(--font); font-size: 14px; font-weight: 500; cursor: pointer;
-  }
-  .btn-save {
-    flex: 2; background: var(--accent2); border: none;
-    border-radius: var(--radius-sm); padding: 12px; color: #fff;
-    font-family: var(--font); font-size: 14px; font-weight: 600;
-    cursor: pointer; transition: opacity 0.2s;
-  }
+  .btn-cancel { flex: 1; background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 12px; color: var(--text2); font-family: var(--font); font-size: 14px; font-weight: 500; cursor: pointer; }
+  .btn-save { flex: 2; background: var(--accent2); border: none; border-radius: var(--radius-sm); padding: 12px; color: #fff; font-family: var(--font); font-size: 14px; font-weight: 600; cursor: pointer; transition: opacity 0.2s; }
   .btn-save:active { opacity: 0.8; }
-  .notif-row {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 12px 0; border-bottom: 1px solid var(--border);
-  }
+  .notif-row { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--border); }
   .notif-row:last-child { border-bottom: none; }
   .notif-info { display: flex; flex-direction: column; gap: 3px; }
   .notif-name { font-size: 14px; font-weight: 500; }
   .notif-time-lbl { font-family: var(--mono); font-size: 11px; color: var(--text3); }
-  .toggle {
-    width: 44px; height: 26px; border-radius: 13px; background: var(--bg4);
-    border: 1px solid var(--border2); cursor: pointer; position: relative;
-    transition: background 0.2s; flex-shrink: 0;
-  }
+  .toggle { width: 44px; height: 26px; border-radius: 13px; background: var(--bg4); border: 1px solid var(--border2); cursor: pointer; position: relative; transition: background 0.2s; flex-shrink: 0; }
   .toggle.on { background: var(--accent2); border-color: var(--accent2); }
-  .toggle::after {
-    content: ''; position: absolute; top: 3px; left: 3px;
-    width: 18px; height: 18px; border-radius: 50%; background: var(--text3);
-    transition: transform 0.2s, background 0.2s;
-  }
+  .toggle::after { content: ''; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%; background: var(--text3); transition: transform 0.2s, background 0.2s; }
   .toggle.on::after { transform: translateX(18px); background: #fff; }
-  .time-input {
-    background: var(--bg3); border: 1px solid var(--border2); border-radius: var(--radius-xs);
-    padding: 6px 8px; color: var(--text); font-family: var(--mono); font-size: 13px;
-    outline: none; width: 80px; text-align: center; margin-right: 8px;
-  }
+  .time-input { background: var(--bg3); border: 1px solid var(--border2); border-radius: var(--radius-xs); padding: 6px 8px; color: var(--text); font-family: var(--mono); font-size: 13px; outline: none; width: 80px; text-align: center; margin-right: 8px; }
   .time-input:focus { border-color: var(--accent); }
-  .toast {
-    position: fixed; bottom: calc(var(--safe-bottom) + 100px); left: 50%;
-    transform: translateX(-50%) translateY(20px);
-    background: var(--bg4); border: 1px solid var(--border2); border-radius: 40px;
-    padding: 10px 18px; font-size: 13px; z-index: 300;
-    opacity: 0; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    pointer-events: none; white-space: nowrap;
-  }
+  .toast { position: fixed; bottom: calc(var(--safe-bottom) + 100px); left: 50%; transform: translateX(-50%) translateY(20px); background: var(--bg4); border: 1px solid var(--border2); border-radius: 40px; padding: 10px 18px; font-size: 13px; z-index: 300; opacity: 0; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); pointer-events: none; white-space: nowrap; }
   .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-  .bottom-bar {
-    position: fixed; bottom: 0; left: 0; right: 0;
-    background: rgba(13,15,20,0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-    border-top: 1px solid var(--border); padding: 12px 20px calc(var(--safe-bottom) + 12px); z-index: 100;
-  }
-  .bottom-bar-inner {
-    max-width: 480px; margin: 0 auto; width: 100%;
-    display: flex; align-items: center; justify-content: space-between; gap: 8px;
-  }
-  .reset-btn {
-    background: none; border: 1px solid var(--border2); border-radius: var(--radius-sm);
-    padding: 9px 12px; color: var(--text3); font-family: var(--font); font-size: 12px;
-    cursor: pointer; transition: all 0.2s; -webkit-tap-highlight-color: transparent;
-  }
+  .bottom-bar { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(13,15,20,0.97); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-top: 1px solid var(--border); padding: 12px 20px calc(var(--safe-bottom) + 12px); z-index: 100; }
+  .bottom-bar-inner { max-width: 480px; margin: 0 auto; width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .reset-btn { background: none; border: 1px solid var(--border2); border-radius: var(--radius-sm); padding: 9px 12px; color: var(--text3); font-family: var(--font); font-size: 12px; cursor: pointer; transition: all 0.2s; -webkit-tap-highlight-color: transparent; }
   .reset-btn:active { background: var(--bg3); color: var(--text2); }
   .completion-badge { font-family: var(--mono); font-size: 12px; color: var(--text3); }
   .completion-badge span { color: var(--green); }
-  .add-task-btn {
-    background: var(--accent2); border: none; border-radius: var(--radius-sm);
-    padding: 9px 16px; color: #fff; font-family: var(--font); font-size: 13px; font-weight: 600;
-    cursor: pointer; display: flex; align-items: center; gap: 6px;
-    -webkit-tap-highlight-color: transparent; transition: opacity 0.2s;
-  }
+  .add-task-btn { background: var(--accent2); border: none; border-radius: var(--radius-sm); padding: 9px 16px; color: #fff; font-family: var(--font); font-size: 13px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 6px; -webkit-tap-highlight-color: transparent; transition: opacity 0.2s; }
   .add-task-btn:active { opacity: 0.8; }
   .history-day { padding: 10px 0; border-bottom: 1px solid var(--border); }
   .history-day:last-child { border-bottom: none; }
@@ -336,7 +215,6 @@
     <button class="add-task-btn" id="addTaskBtn">+ Añadir tarea</button>
   </div>
 </div>
-<!-- Edit Modal -->
 <div class="modal-overlay" id="editModal">
   <div class="modal">
     <div class="modal-handle"></div>
@@ -353,7 +231,6 @@
     </div>
   </div>
 </div>
-<!-- Add Modal -->
 <div class="modal-overlay" id="addModal">
   <div class="modal">
     <div class="modal-handle"></div>
@@ -376,7 +253,6 @@
     </div>
   </div>
 </div>
-<!-- Notifications Modal -->
 <div class="modal-overlay" id="notifModal">
   <div class="modal">
     <div class="modal-handle"></div>
@@ -385,31 +261,30 @@
       <div class="notif-info"><div class="notif-name">☀️ Mañana</div><div class="notif-time-lbl" id="notifMorningLbl">08:00</div></div>
       <div style="display:flex;align-items:center;gap:8px">
         <input type="time" class="time-input" id="notifMorningTime" value="08:00">
-        <div class="toggle" id="toggleMorning" data-key="morning"></div>
+        <div class="toggle" id="toggleMorning"></div>
       </div>
     </div>
     <div class="notif-row">
       <div class="notif-info"><div class="notif-name">🌤️ Tarde</div><div class="notif-time-lbl" id="notifAfternoonLbl">14:00</div></div>
       <div style="display:flex;align-items:center;gap:8px">
         <input type="time" class="time-input" id="notifAfternoonTime" value="14:00">
-        <div class="toggle" id="toggleAfternoon" data-key="afternoon"></div>
+        <div class="toggle" id="toggleAfternoon"></div>
       </div>
     </div>
     <div class="notif-row">
       <div class="notif-info"><div class="notif-name">🌙 Noche</div><div class="notif-time-lbl" id="notifNightLbl">22:00</div></div>
       <div style="display:flex;align-items:center;gap:8px">
         <input type="time" class="time-input" id="notifNightTime" value="22:00">
-        <div class="toggle" id="toggleNight" data-key="night"></div>
+        <div class="toggle" id="toggleNight"></div>
       </div>
     </div>
-    <p style="font-size:12px;color:var(--text3);margin-top:14px;line-height:1.6;">Las notificaciones requieren instalar la app (botón ⬇ Instalar) y aceptar permisos cuando el sistema lo solicite.</p>
+    <p style="font-size:12px;color:var(--text3);margin-top:14px;line-height:1.6;">Las notificaciones requieren instalar la app y aceptar permisos cuando el sistema lo solicite.</p>
     <div class="modal-actions">
       <button class="btn-cancel" id="notifCancel">Cerrar</button>
       <button class="btn-save" id="notifSave">Guardar horarios</button>
     </div>
   </div>
 </div>
-<!-- History Modal -->
 <div class="modal-overlay" id="historyModal">
   <div class="modal">
     <div class="modal-handle"></div>
@@ -445,7 +320,7 @@ function load() {
   save();
 }
 function save() { localStorage.setItem(getTodayKey(), JSON.stringify(tasks)); saveHistorySnapshot(); }
-function saveHistorySnapshot() { const k = getTodayKey(); const {pct} = getProgress(); localStorage.setItem('hist_'+k, JSON.stringify({pct, date:k})); }
+function saveHistorySnapshot() { const k = getTodayKey(), {pct} = getProgress(); localStorage.setItem('hist_'+k, JSON.stringify({pct, date:k})); }
 function getProgress() { const total=tasks.length, done=tasks.filter(t=>t.done).length; return {total,done,pct:total?Math.round(done/total*100):0}; }
 function updateProgress() {
   const {total,done,pct} = getProgress();
@@ -465,29 +340,29 @@ function updateStats() {
 }
 function calcStreak() {
   let s=0; const today=new Date();
-  for(let i=0;i<365;i++) { const d=new Date(today); d.setDate(d.getDate()-i); const sv=localStorage.getItem('hist_tasks_'+d.toISOString().split('T')[0]); if(!sv)break; if(JSON.parse(sv).pct>=80)s++;else break; }
+  for(let i=0;i<365;i++){const d=new Date(today);d.setDate(d.getDate()-i);const sv=localStorage.getItem('hist_tasks_'+d.toISOString().split('T')[0]);if(!sv)break;if(JSON.parse(sv).pct>=80)s++;else break;}
   return s;
 }
 function calcBestStreak() {
   let best=0,cur=0; const today=new Date();
-  for(let i=364;i>=0;i--) { const d=new Date(today); d.setDate(d.getDate()-i); const sv=localStorage.getItem('hist_tasks_'+d.toISOString().split('T')[0]); if(sv&&JSON.parse(sv).pct>=80){cur++;best=Math.max(best,cur);}else cur=0; }
+  for(let i=364;i>=0;i--){const d=new Date(today);d.setDate(d.getDate()-i);const sv=localStorage.getItem('hist_tasks_'+d.toISOString().split('T')[0]);if(sv&&JSON.parse(sv).pct>=80){cur++;best=Math.max(best,cur);}else cur=0;}
   return best;
 }
 function calcWeekAvg() {
   let sum=0,count=0; const today=new Date();
-  for(let i=0;i<7;i++) { const d=new Date(today); d.setDate(d.getDate()-i); const sv=localStorage.getItem('hist_tasks_'+d.toISOString().split('T')[0]); if(sv){sum+=JSON.parse(sv).pct;count++;} }
+  for(let i=0;i<7;i++){const d=new Date(today);d.setDate(d.getDate()-i);const sv=localStorage.getItem('hist_tasks_'+d.toISOString().split('T')[0]);if(sv){sum+=JSON.parse(sv).pct;count++;}}
   return count?Math.round(sum/count):0;
 }
 function render() {
   const content=document.getElementById('content'); content.innerHTML='';
-  ['morning','afternoon','night'].forEach(sk => {
+  ['morning','afternoon','night'].forEach(sk=>{
     const st=tasks.filter(t=>t.section===sk); if(!st.length)return;
-    const sec=SECTIONS[sk], done=st.filter(t=>t.done).length;
+    const sec=SECTIONS[sk], dn=st.filter(t=>t.done).length;
     const se=document.createElement('div'); se.className='section';
-    se.innerHTML=`<div class="section-header"><span class="section-icon">${sec.icon}</span><span class="section-title-text">${sec.label}</span><span class="section-sub">&nbsp;${sec.sub}</span><span class="section-pill ${sec.pillClass}">${done}/${st.length}</span></div>`;
-    st.forEach(task => {
+    se.innerHTML=`<div class="section-header"><span class="section-icon">${sec.icon}</span><span class="section-title-text">${sec.label}</span><span class="section-sub">&nbsp;${sec.sub}</span><span class="section-pill ${sec.pillClass}">${dn}/${st.length}</span></div>`;
+    st.forEach(task=>{
       const el=document.createElement('div'); el.className='task'+(task.done?' done':''); el.id='task_'+task.id;
-      el.innerHTML=`<div class="task-main" data-id="${task.id}"><div class="check-wrap"><span class="check-icon">✓</span></div><div class="task-body"><div class="task-text">${task.text}</div>${task.time?`<div class="task-time">⏰ ${task.time}</div>`:''  }${task.note?`<div class="task-note">⚠️ ${task.note}</div>`:''}</div></div><div class="task-actions"><button class="task-btn" data-action="edit" data-id="${task.id}">✏️ Editar</button><button class="task-btn" data-action="delete" data-id="${task.id}" style="color:var(--red)">🗑 Eliminar</button></div>`;
+      el.innerHTML=`<div class="task-main" data-id="${task.id}"><div class="check-wrap"><span class="check-icon">✓</span></div><div class="task-body"><div class="task-text">${task.text}</div>${task.time?`<div class="task-time">⏰ ${task.time}</div>`:''}${task.note?`<div class="task-note">⚠️ ${task.note}</div>`:''}</div></div><div class="task-actions"><button class="task-btn" data-action="edit" data-id="${task.id}">✏️ Editar</button><button class="task-btn" data-action="delete" data-id="${task.id}" style="color:var(--red)">🗑 Eliminar</button></div>`;
       se.appendChild(el);
     });
     content.appendChild(se);
@@ -501,7 +376,7 @@ function toggleTask(id) {
   render();
 }
 function spawnConfetti(el) {
-  const r=el.getBoundingClientRect(), colors=['#4ade80','#7c9cff','#a78bfa','#fbbf24','#f472b6'];
+  const r=el.getBoundingClientRect(),colors=['#4ade80','#7c9cff','#a78bfa','#fbbf24','#f472b6'];
   for(let i=0;i<6;i++){const dot=document.createElement('div');dot.className='pop';const s=6+Math.random()*8;dot.style.cssText=`width:${s}px;height:${s}px;background:${colors[i%5]};left:${r.left+r.width/2+(Math.random()-.5)*60}px;top:${r.top+20}px;`;document.body.appendChild(dot);setTimeout(()=>dot.remove(),600);}
 }
 document.getElementById('content').addEventListener('click',e=>{
@@ -540,8 +415,8 @@ function applyNotifUI(){
     const lb={morning:'notifMorningLbl',afternoon:'notifAfternoonLbl',night:'notifNightLbl'};
     document.getElementById(tm[k]).value=cfg.time;
     document.getElementById(lb[k]).textContent=cfg.time;
-    const toggle=document.getElementById(tg[k]);
-    if(cfg.on)toggle.classList.add('on');else toggle.classList.remove('on');
+    const tog=document.getElementById(tg[k]);
+    if(cfg.on)tog.classList.add('on');else tog.classList.remove('on');
   });
   const anyOn=Object.values(notifConfig).some(c=>c.on);
   const btn=document.getElementById('notifBtn');
@@ -553,12 +428,12 @@ function scheduleNotifications(){
   ['morning','afternoon','night'].forEach(k=>{
     const cfg=notifConfig[k]; if(!cfg.on)return;
     const[h,m]=cfg.time.split(':').map(Number);
-    const now=new Date(), target=new Date(now.getFullYear(),now.getMonth(),now.getDate(),h,m,0);
+    const now=new Date(),target=new Date(now.getFullYear(),now.getMonth(),now.getDate(),h,m,0);
     if(target<=now)target.setDate(target.getDate()+1);
     const tid=setTimeout(()=>{
       const labels={morning:'Mañana ☀️',afternoon:'Tarde 🌤️',night:'Noche 🌙'};
       const{done,total}=getProgress();
-      new Notification('Protocolo Diario — '+labels[k],{body:'Tienes '+(total-done)+' tareas pendientes.',icon:'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="%230d0f14"/><text x="50%" y="55%" font-size="18" text-anchor="middle" dominant-baseline="middle">💊</text></svg>'});
+      new Notification('Protocolo Diario — '+labels[k],{body:'Tienes '+(total-done)+' tareas pendientes.'});
       setTimeout(()=>scheduleNotifications(),1000);
     },target-now);
     window._notifTimers=window._notifTimers||[];
@@ -587,9 +462,7 @@ let deferredPrompt=null;
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;document.getElementById('installBtn').style.display='block';});
 document.getElementById('installBtn').onclick=async()=>{if(!deferredPrompt)return;deferredPrompt.prompt();const r=await deferredPrompt.userChoice;if(r.outcome==='accepted')showToast('¡App instalada! 🎉');deferredPrompt=null;document.getElementById('installBtn').style.display='none';};
 if('serviceWorker'in navigator){
-  const swCode=`const CACHE='protocolo-v2';self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.add('/')).then(()=>self.skipWaiting()));});self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});self.addEventListener('fetch',e=>{e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request).catch(()=>caches.match(e.request))));});`;
-  const blob=new Blob([swCode],{type:'application/javascript'});
-  navigator.serviceWorker.register(URL.createObjectURL(blob)).catch(()=>{});
+  navigator.serviceWorker.register('/protocolo/sw.js').catch(()=>{});
 }
 setInterval(()=>{const k=getTodayKey();if(!localStorage.getItem(k)){load();render();}},60000);
 load();updateDate();render();applyNotifUI();scheduleNotifications();
